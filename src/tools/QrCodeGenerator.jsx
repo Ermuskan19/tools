@@ -95,7 +95,7 @@ const QrCodeGenerator = () => {
         {dataUrl && (
           <div className="tool-actions">
             <button className="tool-btn tool-btn-primary" onClick={download}>Download PNG</button>
-            <CopyButton text={dataUrl} />
+            <CopyButton text={text} />
           </div>
         )}
       </div>

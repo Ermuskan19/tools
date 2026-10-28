@@ -1006,3 +1006,96 @@
   background-position: 0 0, 0 8px, 8px -8px, -8px 0;
   background-color: #fff;
 }
+
+/* ===== Exam Doc Resizer specific styles ===== */
+.doc-type-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: -0.5rem;
+  scrollbar-width: none;
+}
+
+.doc-type-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.doc-tab {
+  flex: 0 0 auto;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.doc-tab:hover {
+  color: var(--text-primary);
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+.doc-tab.active {
+  color: var(--text-primary);
+  background: var(--accent-soft);
+  border-color: var(--accent-primary);
+}
+
+.control-hint {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.banner-fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin: 0.75rem 0;
+  background: var(--bg-secondary);
+}
+
+.banner-legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0 0.5rem;
+  width: auto;
+}
+
+.validation {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.validation-ok {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.validation-warn {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.exam-note {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
