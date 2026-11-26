@@ -1,0 +1,26 @@
+{
+  "name": "@zegnite/qr",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/main.jsx",
+  "dependencies": {
+    "jsbarcode": "^3.12.3",
+    "jsqr": "^1.4.0",
+    "jszip": "^3.10.2",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
+    "preview": "vite preview"
+  }
+}

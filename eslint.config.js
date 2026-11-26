@@ -5,7 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist', 'dist-ssr']),
+  globalIgnores(['dist', 'dist-ssr', 'node_modules', 'apps/*/dist', 'apps/*/dist-ssr', 'packages/*/dist']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
@@ -19,9 +19,9 @@ export default defineConfig([
     },
   },
   {
-    // Server-only entry used by the prerender build — never hot-reloaded as a
+    // Server-only entries used by the prerender builds — never hot-reloaded as a
     // component module, so the fast-refresh export rule does not apply.
-    files: ['src/entry-server.jsx'],
+    files: ['src/entry-server.jsx', 'apps/*/src/entry-server.jsx'],
     rules: { 'react-refresh/only-export-components': 'off' },
   },
 ])

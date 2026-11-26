@@ -1,0 +1,9 @@
+# Single-page fallback: prerendered HTML exists for every route; this covers
+# any client-side deep links served directly on Hostinger/Apache.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.html [L]
+
+# PDF tool redirects (enable once the custom domain + mapping are verified):
+# RedirectMatch 301 ^/tools/(pdf-merger|pdf-splitter|pdf-compressor|pdf-to-word|word-to-pdf)$ https://pdf.3toone.com/$1

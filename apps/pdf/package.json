@@ -1,0 +1,29 @@
+{
+  "name": "@zegnite/pdf",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/main.jsx",
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.18.4",
+    "pdfjs-dist": "^6.4.299",
+    "docx": "^9.15.0",
+    "mammoth": "^1.13.0",
+    "pdf-lib": "^1.17.1",
+    "@zegnite/shared-ui": "file:../../packages/shared-ui",
+    "@zegnite/pdf-tools": "file:../../packages/pdf-tools"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.12",
+    "tailwindcss": "^4.3.1",
+    "@tailwindcss/vite": "^4.3.1"
+  },
+  "scripts": {
+    "dev": "node scripts/copy-pdf-worker.mjs && vite",
+    "build": "node scripts/copy-pdf-worker.mjs && vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
+    "preview": "vite preview"
+  }
+}

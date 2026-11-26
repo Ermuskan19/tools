@@ -1,0 +1,6 @@
+# Single-page fallback: prerendered HTML exists for every route; this covers
+# any client-side deep links served directly on Hostinger/Apache.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.html [L]

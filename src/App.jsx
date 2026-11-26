@@ -318,10 +318,10 @@ const ToolPage = () => {
   useEffect(() => {
     if (!slug) return;
     try {
-      const stored = localStorage.getItem('zegnite-recent');
+      const stored = localStorage.getItem('3toone-recent');
       let recent = stored ? JSON.parse(stored) : [];
       recent = [slug, ...recent.filter(s => s !== slug)].slice(0, 6);
-      localStorage.setItem('zegnite-recent', JSON.stringify(recent));
+      localStorage.setItem('3toone-recent', JSON.stringify(recent));
     } catch { /* storage unavailable (private mode) — ignore */ }
   }, [slug]);
 
@@ -346,7 +346,7 @@ let recentValueCache = [];
 const readRecent = () => {
   if (typeof window === 'undefined') return recentValueCache;
   let raw = '[]';
-  try { raw = localStorage.getItem('zegnite-recent') || '[]'; } catch { /* private mode */ }
+  try { raw = localStorage.getItem('3toone-recent') || '[]'; } catch { /* private mode */ }
   if (raw !== recentRawCache) {
     recentRawCache = raw;
     try { recentValueCache = JSON.parse(raw); } catch { recentValueCache = []; }
